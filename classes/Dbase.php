@@ -51,7 +51,7 @@ class Dbase {
 			$value = mysql_real_escape_string($value);
 		} else {
 			if(!get_magic_quotes_gpc()) {
-				$value = addcslashes($value);
+				$value = addcslashes($value, '');
 			}
 		}
 		return $value;
